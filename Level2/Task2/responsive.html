@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+      display: flex;
+      gap: 20px;
+    }
+
+    .box {
+      flex: 1;
+      background-color: white;
+      padding: 20px;
+      border-radius: 6px;
+    }
+    .box h2 {
+      margin-top: 0;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    @media (max-width: 800px) {
+      .container {
+        flex-wrap: wrap;
+      }
+
+      .box {
+        flex: 1 1 45%;
+      }
+
+      header h1 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        flex-direction: column;
+      }
+
+      header h1 {
+        font-size: 22px;
+      }
+
+      .box {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Responsive Page</h1>
+  </header>
+  <div class="container">
+    <div class="box">
+      <h2>Box 1</h2>
+      <p>This is the first box of my page.</p>
+    </div>
+
+    <div class="box">
+      <h2>Box 2</h2>
+      <p>This is the second box of my page.</p>
+    </div>
+    <div class="box">
+      <h2>Box 3</h2>
+      <p>This is the third box of my page.</p>
+    </div>
+  </div>
+  <footer>
+    <p>Made with HTML and CSS</p>
+  </footer>
+
+</body>
+</html>

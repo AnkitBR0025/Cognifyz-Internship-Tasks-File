@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Button</title>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center;  
+            gap:15px;   
+        }
+        .button {
+            background-color: #010101;
+            border-radius: 5px;
+            color: white;
+            padding: 10px 20px;
+            width: fit-content;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Click the buttin to show the effect.</h2>
+    <h1 class="button" id="myButton">Button</h1>
+
+    <script>
+        let button = document.getElementById("myButton");
+
+        let isRed = false;
+
+        button.addEventListener("click", function() {
+
+            if (isRed == false) {
+                button.style.backgroundColor = "red";
+                isRed = true;
+            }
+            else {
+                button.style.backgroundColor = "#010101";
+                isRed = false;
+            }
+
+        });
+    </script>
+
+</body>
+</html>
